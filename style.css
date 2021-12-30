@@ -26,7 +26,7 @@ body {
 }
 
 .tabs .tabs--nav {
-  position: relative;
+  position: fixed;
   display: inline-flex;
   align-items: center;
   padding: 10px;
@@ -81,6 +81,7 @@ body {
 }
 
 .tabs .tabs--content {
+  margin-top: 70px;
   padding: 20px;
   box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
     -0.2rem -0.2rem 0.5rem var(--shadow-white);
@@ -94,7 +95,73 @@ h3 {
 }
 
 /* aditya ray */
+.tabs .control_tabs--nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 1rem 0.3rem 0.6rem -0.6rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.5rem var(--shadow-white);
+  background-color: var(--bg-gray);
+  width: 100%;
+}
 
+.tabs .control_tabs--nav span {
+  padding: 15px;
+  display: block;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.tabs .control_tabs--nav span.wait-animation {
+  pointer-events: none;
+}
+
+.tabs .control_tabs--nav span:not(:first-of-type):not(:last-of-type) {
+  margin: 0 10px;
+}
+
+.tabs .control_tabs--nav span.active {
+  color: var(--text-purple);
+  transition-delay: 0.25s;
+  transition-duration: 0.5s;
+}
+
+.tabs .control_tabs--nav span:not(.active):hover {
+  /* 	box-shadow: inset 0.15em 0.15em 0.15em var(--shadow-white),
+		inset -0.15em -0.15em 0.15em var(--shadow-gray),
+		0.3rem 0.3rem 0.6rem var(--shadow-gray),
+		-0.3rem -0rem 0.6rem var(--shadow-white); */
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-gray),
+    inset -0.2rem -0.2rem 0.5rem var(--shadow-white);
+}
+
+.tabs .control_tabs--nav .tabs--fx {
+  position: absolute;
+  /* 	box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-gray),
+		inset -0.2rem -0.2rem 0.5rem var(--shadow-white); */
+  box-shadow: inset 0.15em 0.15em 0.15em var(--shadow-white),
+    inset -0.15em -0.15em 0.15em var(--shadow-gray),
+    0.3rem 0.3rem 0.6rem var(--shadow-gray),
+    -0.3rem -0rem 0.6rem var(--shadow-white);
+  border-radius: 0.75rem;
+  opacity: 0;
+}
+
+.tabs .control_tabs--content {
+  padding: 20px;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.5rem var(--shadow-white);
+  background-color: var(--bg-gray);
+  min-height: 100vh;
+}
+
+.tabs .control_tabs--content h2,
+h3 {
+  color: var(--text-purple);
+}
 .our_card {
   box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
     -0.2rem -0.2rem 0.5rem var(--shadow-white);
@@ -130,13 +197,67 @@ ol {
 }
 .bridge_wrap {
   width: 100%;
+  overflow: auto;
 }
 .bridge {
   width: 400px;
   margin: 20px auto;
 }
 .wrap_in {
+  position: relative;
   width: fit-content;
   margin: 10px auto;
+}
+.vin {
+  position: absolute;
+
+  width: 80px;
+  height: 20px;
+  font-size: 12px;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.5rem var(--shadow-white);
+  background-color: var(--bg-gray);
+  border: 1px solid rgba(0, 0, 0, 0.418);
+}
+.r1 {
+  top: 100px;
+  left: 60px;
+}
+.r2 {
+  bottom: 100px;
+  left: 60px;
+}
+.r3 {
+  top: 100px;
+  right: 0px;
+}
+.vs {
+  top: 200px;
+  left: -80px;
+}
+.vg {
+  position: absolute;
+
+  width: 100px;
+  height: 40px;
+  font-size: 12px;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.5rem var(--shadow-white);
+  background-color: var(--bg-gray);
+  border: 1px solid rgba(0, 0, 0, 0.418);
+  top: 200px;
+  left: 180px;
+}
+.switchonn {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  width: 40px;
+}
+.switchoff {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  width: 40px;
 }
 /* aditya ray */
