@@ -12,13 +12,125 @@
 
     <title>Wheat Stone Bridge Simulator</title>
     <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
-
+    <div class="tabs">
+        <div class="tabs--nav">
+            <span> <i class="bi bi-book"></i> Theory </span>
+            <span> <i class="bi bi-gear"></i> Procedure </span>
+            <span> <i class="bi bi-eye"></i> Simulator</span>
+            <span><i class="bi bi-person"></i> About</span>
+        </div>
+        <div class="tabs--content">
+            <div>
+                <h2>Item A</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut?</p>
+            </div>
+            <div>
+                <h2>Item B</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut? Lorem ipsum dolor sit amet consectetur adipisicing elit. In, soluta. Omnis quibusdam, corrupti distinctio quidem sunt, provident deleniti, voluptatem tempore dolorum quia sit consequuntur. Sit est quia deleniti sed tempora.</p>
+            </div>
+            <div>
+                <h2>Item C</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste at quae eveniet modi id ipsum, deserunt eligendi soluta tenetur asperiores odio! In porro consequatur ratione molestias nihil, sunt reprehenderit!
+                    Quae accusantium reiciendis deserunt eos ullam, quidem illo corrupti doloribus ex natus quibusdam saepe quis, quisquam iusto, quos sequi necessitatibus ducimus esse sapiente vel illum omnis nemo perspiciatis. Soluta, qui.
+                    Autem officia odit sequi deserunt. Adipisci nulla necessitatibus esse voluptatum harum quia incidunt id. Minus aspernatur magni sit mollitia repellat unde est aperiam excepturi aut, sunt ut expedita autem hic.</p>
+            </div>
+            <div>
+                <h2>Item D</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut?</p>
+            </div>
+            <div>
+                <h2>Item E</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut?</p>
+            </div>
+        </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script>
+        (function ($) {
+	$.fn.neumorphicTabs = function () {
+		$(this).each(function () {
+			let tabsNav = $(this).find(".tabs--nav");
+			let tabsContent = $(this).find(".tabs--content");
+
+			tabsNav.append("<div class='tabs--fx'/>");
+
+			let activeNavItem = tabsNav.find(".active").length
+				? tabsNav.find(".active")
+				: tabsNav.children().first();
+			tabsNav.attr(
+				"style",
+				`--tab-width: ${activeNavItem.outerWidth()}px; --tab-position: `
+			);
+
+			let tabsFx = tabsNav.find(".tabs--fx");
+
+			function translateTabsFx(activeEl) {
+				tabsFx.height(activeEl.outerHeight()).animate({
+					opacity: 1,
+					left: activeEl.position().left + parseInt(activeEl.css("marginLeft")),
+					width: activeEl.outerWidth()
+				});
+			}
+
+			translateTabsFx(activeNavItem);
+
+			tabsNav
+				.children()
+				.not("div")
+				.each(function (i) {
+					if (i == 0 && !tabsNav.find(".active").length) $(this).addClass("active");
+					$(this).attr("data-tab", i);
+				});
+
+			tabsContent.children().each(function (i) {
+				if (tabsNav.find(".active").attr("data-tab") == i) {
+					$(this).addClass("active");
+				} else {
+					$(this).hide();
+				}
+				$(this).attr("data-tab", i);
+			});
+
+			tabsNav.children().on("click", function () {
+				let currentTab = $(this);
+				if (currentTab.hasClass("active") || currentTab.hasClass("tabs--fx"))
+					return false;
+				tabsNav.children().each(function () {
+					$(this).addClass("wait-animation");
+				});
+				translateTabsFx(currentTab);
+				tabsNav.find(".active").removeClass("active");
+				currentTab.addClass("active");
+				tabsContent
+					.find(".active")
+					.fadeOut()
+					.promise()
+					.done(function () {
+						tabsContent
+							.find(`[data-tab='${currentTab.attr("data-tab")}']`)
+							.addClass("active")
+							.fadeIn();
+						tabsNav.children().each(function () {
+							$(this).removeClass("wait-animation");
+						});
+					});
+			});
+		});
+		return this;
+	};
+})(jQuery);
+
+$(".tabs").neumorphicTabs();
+
+    </script>
 </body>
 
 </html>
