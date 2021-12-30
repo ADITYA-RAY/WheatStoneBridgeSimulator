@@ -85,7 +85,7 @@ body {
   box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
     -0.2rem -0.2rem 0.5rem var(--shadow-white);
   background-color: var(--bg-gray);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .tabs .tabs--content h2,
