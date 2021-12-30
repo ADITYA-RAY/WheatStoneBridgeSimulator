@@ -128,4 +128,15 @@ h3 {
 ol {
   margin-left: 0;
 }
+.bridge_wrap {
+  width: 100%;
+}
+.bridge {
+  width: 400px;
+  margin: 20px auto;
+}
+.wrap_in {
+  width: fit-content;
+  margin: 10px auto;
+}
 /* aditya ray */
