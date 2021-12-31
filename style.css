@@ -261,3 +261,29 @@ ol {
   width: 40px;
 }
 /* aditya ray */
+/* about us */
+.box{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 90px;
+  
+}
+
+h2{
+  text-align: center;
+}
+.contain{
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.5rem var(--shadow-white);
+  background-color: var(--bg-gray);
+  border-radius: 12px;
+  padding: 60px;
+}
+
+.contain p{
+  text-align: center;
+  padding-top: 45px;
+}
+td{
+  padding: 3px;
+}
