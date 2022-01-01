@@ -304,3 +304,12 @@ td{
   position: absolute;
   z-index: 2;
 }
+
+.blink
+{
+  transition: 1s; -webkit-transition: 1s; -moz-transition: 1s; -ms-transition: 1s; -o-transition: 1s;
+}
+.blink:hover{ background-color: rgb(109, 93, 252,0.2); 
+
+}
+
