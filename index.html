@@ -1,132 +1,460 @@
+<!-- Skip to content Search or jump to… Pull requests Issues Marketplace Explore
+@Mh-Alim ADITYA-RAY / WheatStoneBridgeSimulator Public Code Issues Pull requests
+Actions Projects Wiki Security Insights WheatStoneBridgeSimulator/index.html
+@Piyushthakare999 Piyushthakare999 about modified Latest commit 9d198cd 21 hours
+ago History 4 contributors @ADITYA-RAY@Piyushthakare999@Mh-Alim@kurayami07734
+440 lines (400 sloc) 21.6 KB -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="./images/favicon.ico" />
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <title>Wheat Stone Bridge Simulator</title>
-    <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<title>Wheat Stone Bridge Simulator</title>
+	<script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
 
 <body>
-    <div class="tabs">
-        <div class="tabs--nav">
-            <span> <i class="bi bi-book"></i> Theory </span>
-            <span> <i class="bi bi-gear"></i> Procedure </span>
-            <span> <i class="bi bi-eye"></i> Simulator</span>
-            <span><i class="bi bi-person"></i> About</span>
-        </div>
-        <div class="tabs--content">
-            <div>
-                <h2>Theory</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut?</p>
-            </div>
-            <div>
-                <h2>Procedure</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut? Lorem ipsum dolor sit amet consectetur adipisicing elit. In, soluta. Omnis quibusdam, corrupti distinctio quidem sunt, provident deleniti, voluptatem tempore dolorum quia sit consequuntur. Sit est quia deleniti sed tempora.</p>
-            </div>
-            <div>
-                <h2>Simulator</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste at quae eveniet modi id ipsum, deserunt eligendi soluta tenetur asperiores odio! In porro consequatur ratione molestias nihil, sunt reprehenderit!
-                    Quae accusantium reiciendis deserunt eos ullam, quidem illo corrupti doloribus ex natus quibusdam saepe quis, quisquam iusto, quos sequi necessitatibus ducimus esse sapiente vel illum omnis nemo perspiciatis. Soluta, qui.
-                    Autem officia odit sequi deserunt. Adipisci nulla necessitatibus esse voluptatum harum quia incidunt id. Minus aspernatur magni sit mollitia repellat unde est aperiam excepturi aut, sunt ut expedita autem hic.</p>
-            </div>
-            <div>
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore error impedit vero laborum a quasi, sit dolores quod sunt officia dolorum doloribus labore adipisci facilis earum voluptas ea, minima aut?</p>
-            </div>
-        </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script>
-        (function ($) {
-	$.fn.neumorphicTabs = function () {
-		$(this).each(function () {
-			let tabsNav = $(this).find(".tabs--nav");
-			let tabsContent = $(this).find(".tabs--content");
+	<div class="tabs">
+		<div class="tabs--nav">
+			<span> <i class="bi bi-book"></i> Theory </span>
+			<span> <i class="bi bi-gear"></i> Procedure </span>
+			<span> <i class="bi bi-eye"></i> Simulator</span>
+			<span><i class="bi bi-person"></i> About</span>
+		</div>
+		<div class="tabs--content">
+			<div>
+				<div class="container">
+					<h1>This site is made by Alim Khan and 5 other chillars supported me </h1>
+					<h2>Theory</h2>
+					<br />
+					<p>
+						It may be shown by experiment that the electrical resistance of a
+						wire is directly proportional to its length and inversely
+						proportional to its cross-sectional area. The resistivity ρ is
+						then defined by the equation
+					</p>
+					<p style="text-align: center">R = ρL/A</p>
+					<p>
+						The Wheatstone Bridge is an instrument designed for measuring an
+						unknown resistance by comparing it with a known, or standard
+						resistor.
+					</p>
+					<p>
+						R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are resistors of
+						known resistance and the resistance of R<sub>2</sub> is
+						adjustable. The resistance R<sub>2</sub> is adjusted until the
+						bridge is "balanced" and no current flows through the galvanometer
+						V<sub>G</sub>. At this point, the potential difference between the
+						two midpoints (B and D) will be zero. Therefore the ratio of the
+						two resistances in the known leg (R<sub>2</sub>/R<sub>1</sub>) is
+						equal to the ratio of the two resistances in the unknown leg
+						(R<sub>x</sub>/R<sub>3</sub>). If the bridge is unbalanced, the
+						direction of the current indicates whether R<sub>2</sub> is too
+						high or too low.
+					</p>
+					<p>
+						At the point of balance,
+						<br />
+						<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1d10637c0ae2c1ef7ee40aa0d5f8cce2108367b7"
+							alt="wheatstone equation" style="padding-left: 150px" />
+					</p>
+					<p>
+						Detecting zero current with a galvanometer can be done to
+						extremely high precision. Therefore, if R<sub>1</sub>,
+						R<sub>2</sub>, and R<sub>3</sub> are known to high precision, then
+						R<sub>x</sub> can be measured to high precision. Very small
+						changes in R<sub>x</sub> disrupt the balance and are readily
+						detected.
+					</p>
+					<p>
+						Alternatively, if R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub>
+						are known, but R<sub>2</sub> is not adjustable, the voltage
+						difference across or current flow through the meter can be used to
+						calculate the value of R<sub>x</sub>, using Kirchhoff's circuit
+						laws. This setup is frequently used in strain gauge and resistance
+						thermometer measurements, as it is usually faster to read a
+						voltage level off a meter than to adjust a resistance to zero the
+						voltage.
+					</p>
+				</div>
+			</div>
+			<div>
+				<div class="container">
+					<h2>Laboratary Procedure</h2>
+					<br />
+					<ol>
+						<li>
+							Use the Resistor Color Code in the introduction of this manual
+							to determine the nominal resistances and tolerances of all
+							resistors on the resistor board. If the bands are too worn to be
+							seen clearly, obtain a magnifying lens from the instructor.
+						</li>
+						<br />
+						<li>
+							Refer to the semi-pictorial diagram in section IV. The letters
+							A-D refer to the same points as in the schematic diagram.
+							Connect resistor A on the board of resistors, the first
+							"unknown" resistor, between bars A and B. Connect the plug
+							resistance box, the standard resistor, between bars B and C.
+							Connect the left end of the one-meter wire to bar A and the
+							right end to bar C.
+						</li>
+						<br />
+						<li>
+							Clean the contacts of the switch with a piece of emery cloth.
+							Connect one terminal of the switch to bar C; connect the other
+							terminal to either terminal of the cell. Connect the other
+							terminal of the cell to bar A. Leave the switch open.
+						</li>
+						<br />
+						<li>
+							See if any of the buttons of the galvanometer is stuck in the
+							depressed position; if so, rotate it to release it. Connect one
+							terminal of the galvanometer to bar B; connect the other
+							terminal to the long bar D.
+						</li>
+						<br />
+						<li>
+							Set the plug resistance box to a resistance of the same order of
+							magnitude as the unknown resistor, by removing enough plugs to
+							total the desired resistance; then twist and push in all of the
+							remaining plugs.
+						</li>
+						<br />
+						<li>
+							Close the switch S1. Place the sliding contact near the left end
+							of the wire, and hold one end of it down. Depress the left
+							button of the galvanometer and observe which way the needle
+							deflects. In the rest of this experiment, whenever the needle
+							deflects in this direction, you will know that the slider is too
+							far to the left for balance.
+						</li>
+						<br />
+						<li>
+							Move the slider to a point near the middle of the wire. Hold one
+							end of the slider down, and momentarily depress the left button
+							of the galvanometer. Observing the direction of the deflection,
+							and remembering the results of step 6, move the slider to a new
+							position and repeat the test. (Do not move the slider while
+							holding it down, as that would scrape bits of metal off of the
+							wire and result in a non-uniform cross-section. This will lead
+							to the failure of the ratio of R<sub>3</sub> to R<sub>4</sub> to
+							equal the ratio of L3 to L4.) When the galvanometer deflection
+							has been reduced to zero for the left button of the
+							galvanometer, use the middle button and, finally, to the right
+							button. When there is no deflection, using the right button of
+							the galvanometer, the bridge has been balanced. Record the
+							nominal value of the resistance, the slide wire position (L3),
+							and the standard resistance (R<sub>2</sub>).
+						</li>
+						<br />
+					</ol>
+				</div>
+			</div>
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-4">
+							<div class="our_card">
+								<div class="purple">Procedure</div>
+								<br />
+								<ol style="font-size: 11px">
+									<li>
+										Use the Resistor Color Code in the introduction of this
+										manual to determine the nominal resistances and tolerances
+										of all resistors on the resistor board. If the bands are
+										too worn to be seen clearly, obtain a magnifying lens from
+										the instructor.
+									</li>
+									<br />
 
-			tabsNav.append("<div class='tabs--fx'/>");
+									<li>
+										Clean the contacts of the switch with a piece of emery
+										cloth. Connect one terminal of the switch to bar C;
+										connect the other terminal to either terminal of the cell.
+										Connect the other terminal of the cell to bar A. Leave the
+										switch open.
+									</li>
+									<br />
+									<li>
+										See if any of the buttons of the galvanometer is stuck in
+										the depressed position; if so, rotate it to release it.
+										Connect one terminal of the galvanometer to bar B; connect
+										the other terminal to the long bar D.
+									</li>
+									<br />
+								</ol>
+							</div>
+							<br />
+							<div class="AlimContainer">
+								<div class="our_card">
+									<div class="box">
+	
+										<div id="f1" onclick="fun1()">Set Unknown Resistance</div>
+										<div id="f2" onclick="fun2()">Simulate</div>
+	
+									</div>
+									<!-- <div class="control_tabs--nav">
+										<span> Set Resistance Value </span>
+										<span> Measure Resistance Value </span>
+									</div>
+									<div class="control_tabs--content">
+										<div>
+											hllo
+										</div>
+										<div>
+											hi
+										</div>
+									</div> -->
+									
+									<div id="AlimCard1">
 
-			let activeNavItem = tabsNav.find(".active").length
-				? tabsNav.find(".active")
-				: tabsNav.children().first();
-			tabsNav.attr(
-				"style",
-				`--tab-width: ${activeNavItem.outerWidth()}px; --tab-position: `
-			);
+									<div class="purple"> <h6>Set Unknown Resistance </h6></div>
+									
 
-			let tabsFx = tabsNav.find(".tabs--fx");
+										<form name="myForm">
+											<label for="rsx">R<sub>x</sub> (in Ω) </label> 
+											<input type="range" id="rsx" max="1000" min="0" step="1" value="20"
+											style="display: block; width: 100%" onchange="swap('rsx','rsxt')" />
+											<input type="number" id="rsxt" max="1000" min="0" step="1" value="20"
+											onchange="swap('rsxt','rsx')" style="height: 30px; margin: 10px 10px;" />
+										</form>
+										
+									
+									<button type="button" class="set" onclick="setResistance()" style="margin: 3px 10px;">
+										Set
+									</button>
+									<br />
+									<br>
+									
+									
+								    </div>
+									<div id="AlimCard2">
+										<div class="sContainer">
+											<div class="one">
+												<label for="rs3" style="width: fit-content; margin-right: 20px;">R<sub>x</sub> (in Ω) </label>
+												<input type="number" id="sim" max="1000" min="0" step="1" value="0" disabled />
+												
+											</div>
+											
+											<button type="button" class="set" id="simButton" style="width: fit-content; margin-left: 20px;height: 52px;margin-top: 20px; " onclick="simulate()">
+												Simulate
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-8">
+							<div class="our_card">
+								<div class="bridge_wrap">
+									<div class="wrap_in">
+										<img src="./images/bridge.png" alt="bridge" class="bridge" draggable="false" />
+										<canvas width="180" height="87" class="jqplot-event-canvas"
+											style="position: absolute; left: 10px; top: 10px"></canvas>
 
-			function translateTabsFx(activeEl) {
-				tabsFx.height(activeEl.outerHeight()).animate({
-					opacity: 1,
-					left: activeEl.position().left + parseInt(activeEl.css("marginLeft")),
-					width: activeEl.outerWidth()
-				});
-			}
+										<input type="number" class="vin r1" id="rt1" value="0"
+											onchange="matchValues('rt1','rs1')" />
+										<input type="number" class="vin r2" id="rt2" value="0"
+											onchange="matchValues('rt2','rs2')" />
+										<input type="number" class="vin r3" id="rt3" value="0"
+											onchange="matchValues('rt3','rs3')" />
+										<input type="number" class="vg" id="vg" value="0" disabled />
+										<input type="number" class="vin vs" id="vs" value="20" />
+										<div class="switch">
+											<img src="./images/switchoff.png" alt="" class="switchonn"
+												onclick="switchCircuit()" />
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							<br>
+							<div class="our_card">
+								<div class="purple"> <h3>Controls</h3></div>
+								<div >
 
-			translateTabsFx(activeNavItem);
+									
+									<div class="formContainer">
+												<label for="rs1">R<sub>1</sub> (in Ω)  </label>
+												<input type="range" id="rs1" max="1000" min="0" step="1" value="0"
+												style="display: block; width: 100%" onchange="matchValues('rs1','rt1')" />
+									</div>
+									<div class="formContainer">
 
-			tabsNav
-				.children()
-				.not("div")
-				.each(function (i) {
-					if (i == 0 && !tabsNav.find(".active").length) $(this).addClass("active");
-					$(this).attr("data-tab", i);
-				});
+										<label for="rs2">R<sub>2</sub> (in Ω) </label>
+										<input type="range" id="rs2" max="1000" min="0" step="1" value="0"
+										style="display: block; width: 100%" onchange="matchValues('rs2','rt2')" />
+									</div>
 
-			tabsContent.children().each(function (i) {
-				if (tabsNav.find(".active").attr("data-tab") == i) {
-					$(this).addClass("active");
-				} else {
-					$(this).hide();
-				}
-				$(this).attr("data-tab", i);
-			});
+									<div class="formContainer">
 
-			tabsNav.children().on("click", function () {
-				let currentTab = $(this);
-				if (currentTab.hasClass("active") || currentTab.hasClass("tabs--fx"))
-					return false;
-				tabsNav.children().each(function () {
-					$(this).addClass("wait-animation");
-				});
-				translateTabsFx(currentTab);
-				tabsNav.find(".active").removeClass("active");
-				currentTab.addClass("active");
-				tabsContent
-					.find(".active")
-					.fadeOut()
-					.promise()
-					.done(function () {
-						tabsContent
-							.find(`[data-tab='${currentTab.attr("data-tab")}']`)
-							.addClass("active")
-							.fadeIn();
-						tabsNav.children().each(function () {
-							$(this).removeClass("wait-animation");
+										<label for="rs3">R<sub>3</sub> (in Ω) </label>
+										<input type="range" id="rs3" max="1000" min="0" step="1" value="0"
+										style="display: block; width: 100%" onchange="matchValues('rs3','rt3')" />
+									</div>
+
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2>About Us</h2>
+				<div class="box">
+					<div class="contain">
+						<h5>Created by:</h5>
+						<table>
+							<tr>
+								<td>Aditya Ray</td>
+								<td>20117006</td>
+							</tr>
+							<tr>
+								<td>Lakshman Mulchandani</td>
+								<td>20117048</td>
+							</tr>
+							<tr>
+								<td>Piyush Thakare</td>
+								<td>20117104</td>
+							</tr>
+							<tr>
+								<td>Alim Khan</td>
+								<td>20117013</td>
+							</tr>
+							<tr>
+								<td>Aditya Ghidora</td>
+								<td>20117005</td>
+							</tr>
+							<tr>
+								<td>Premchand Maddikuntla</td>
+								<td>20117051</td>
+							</tr>
+						</table>
+					</div>
+					<div class="contain">
+						<h5>Under supervision of:</h5>
+						<p>
+							Dr. Dhanavath Suresh sir <br />
+							Department of Electrical Engineering <br />
+							National Institute of Technology, Raipur
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script>
+		(function ($) {
+			$.fn.neumorphicTabs = function () {
+				$(this).each(function () {
+					let tabsNav = $(this).find(".tabs--nav");
+					let tabsContent = $(this).find(".tabs--content");
+
+					tabsNav.append("<div class='tabs--fx'/>");
+
+					let activeNavItem = tabsNav.find(".active").length
+						? tabsNav.find(".active")
+						: tabsNav.children().first();
+					tabsNav.attr(
+						"style",
+						`--tab-width: ${activeNavItem.outerWidth()}px; --tab-position: `
+					);
+
+					let tabsFx = tabsNav.find(".tabs--fx");
+
+					function translateTabsFx(activeEl) {
+						tabsFx.height(activeEl.outerHeight()).animate({
+							opacity: 1,
+							left:
+								activeEl.position().left +
+								parseInt(activeEl.css("marginLeft")),
+							width: activeEl.outerWidth(),
 						});
+					}
+
+					translateTabsFx(activeNavItem);
+
+					tabsNav
+						.children()
+						.not("div")
+						.each(function (i) {
+							if (i == 0 && !tabsNav.find(".active").length)
+								$(this).addClass("active");
+							$(this).attr("data-tab", i);
+						});
+
+					tabsContent.children().each(function (i) {
+						if (tabsNav.find(".active").attr("data-tab") == i) {
+							$(this).addClass("active");
+						} else {
+							$(this).hide();
+						}
+						$(this).attr("data-tab", i);
 					});
-			});
-		});
-		return this;
-	};
-})(jQuery);
 
-$(".tabs").neumorphicTabs();
+					tabsNav.children().on("click", function () {
+						let currentTab = $(this);
+						if (
+							currentTab.hasClass("active") ||
+							currentTab.hasClass("tabs--fx")
+						)
+							return false;
+						tabsNav.children().each(function () {
+							$(this).addClass("wait-animation");
+						});
+						translateTabsFx(currentTab);
+						tabsNav.find(".active").removeClass("active");
+						currentTab.addClass("active");
+						tabsContent
+							.find(".active")
+							.fadeOut()
+							.promise()
+							.done(function () {
+								tabsContent
+									.find(`[data-tab='${currentTab.attr("data-tab")}']`)
+									.addClass("active")
+									.fadeIn();
+								tabsNav.children().each(function () {
+									$(this).removeClass("wait-animation");
+								});
+							});
+					});
+				});
+				return this;
+			};
+		})(jQuery);
 
-    </script>
+		$(".tabs").neumorphicTabs();
+	</script>
 </body>
 
 </html>
+<!-- © 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete -->
