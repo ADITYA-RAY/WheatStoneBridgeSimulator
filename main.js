@@ -26,7 +26,17 @@ function unkownResistance(r1, r2, r3, vg, vs) {
 }
 
 // Aditya Ghidora
-
+// Lakshman
+function glow(a, b) {
+  var p = document.getElementById(a);
+  var q = document.getElementById(b);
+  q.style.transition = "1s";
+  q.style.backgroundColor = "rgba(09, 93, 252,0.2)";
+  setTimeout(() => {
+    q.style.backgroundColor = "#00000000";
+  }, 1000);
+}
+// Lakshman
 //aditya ray----------------
 function matchValues(a, b) {
   if (set && running) {
@@ -37,6 +47,7 @@ function matchValues(a, b) {
     var vg = galvanometer(rs1, rs2, rs3, unknown, supply);
     document.getElementById("vg").value = vg.toPrecision(8);
     final = unkownResistance(rs1, rs2, rs3, vg, supply);
+    glow(); //lakshman
   }
 }
 function swap(a, b) {
