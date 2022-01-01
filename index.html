@@ -29,7 +29,7 @@
 
             <div>
                 <div class="container">
-
+                    <h1>This website is made by Alim Khan and supported by my 5 chillars</h1>
                     <h2>Theory</h2>
                     <br>
                     <p>
@@ -200,7 +200,65 @@
                                 </ol>
                             </div>
                             <br>
-                            <div class="our_card blink">
+                            <div class="AlimContainer" >
+								<div class="our_card">
+									<div class="box">
+	
+										<div id="f1" onclick="fun1()">Set Unknown Resistance</div>
+										<div id="f2" onclick="fun2()">Simulate</div>
+	
+									</div>
+									<!-- <div class="control_tabs--nav">
+										<span> Set Resistance Value </span>
+										<span> Measure Resistance Value </span>
+									</div>
+									<div class="control_tabs--content">
+										<div>
+											hllo
+										</div>
+										<div>
+											hi
+										</div>
+									</div> -->
+									
+									<div id="AlimCard1">
+
+									<div class="purple"> <h6>Set Unknown Resistance </h6></div>
+									
+
+										<form name="myForm">
+											<label for="rsx">R<sub>x</sub> (in Ω) </label> 
+											<input type="range" id="rsx" max="1000" min="0" step="1" value="20"
+											style="display: block; width: 100%" onchange="swap('rsx','rsxt')" />
+											<input type="number" id="rsxt" max="1000" min="0" step="1" value="20"
+											onchange="swap('rsxt','rsx')" style="height: 30px; margin: 10px 10px;" />
+										</form>
+										
+									
+									<button type="button" class="set" onclick="setResistance()" style="margin: 3px 10px;">
+										Set
+									</button>
+									<br />
+									<br>
+									
+									
+								    </div>
+									<div id="AlimCard2">
+										<div class="sContainer">
+											<div class="one">
+												<label for="rs3" style="width: fit-content; margin-right: 20px;">R<sub>x</sub> (in Ω) </label>
+												<input type="number" id="sim" max="1000" min="0" step="1" value="0" disabled />
+												
+											</div>
+											
+											<button type="button" class="set" id="simButton" style="width: fit-content; margin-left: 20px;height: 52px;margin-top: 20px; " onclick="simulate()">
+												Simulate
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+                            <!-- <div class="our_card blink"> -->
                                 <!-- <div class="control_tabs--nav">
                                     <span> Set Resistance Value </span>
                                     <span> Measure Resistance Value </span>
@@ -215,7 +273,7 @@
                                         hi
                                     </div>
                                 </div> -->
-                                <div class="purple">Set Unknown Resistance</div>
+                                <!-- <div class="purple">Set Unknown Resistance</div>
                                 <form name="myForm">
                                     <label for="rsx">R<sub>x</sub></label>
                                     <input type="range" id="rsx" max="1000" min="0" step="1" value="20"
@@ -238,9 +296,9 @@
                                 <button type="button" class="btn btn-primary" onclick="simulate()">Simulate</button>
 
                                 <label for="rs3">R<sub>x</sub></label>
-                                <input type="number" id="sim" max="1000" min="0" step="1" value="0" disabled>
+                                <input type="number" id="sim" max="1000" min="0" step="1" value="0" disabled> -->
 
-                            </div>
+                            <!-- </div>   -->
                         </div>
                         <div class="col-12 col-md-8">
                             <div class="our_card blink">
@@ -268,6 +326,33 @@
 
                                 </div>
                             </div>
+                            <br>
+                            <div class="our_card">
+								<div class="purple"> <h3>Controls</h3></div>
+								<div >
+
+									
+									<div class="formContainer">
+												<label for="rs1">R<sub>1</sub> (in Ω)  </label>
+												<input type="range" id="rs1" max="1000" min="0" step="1" value="0"
+												style="display: block; width: 100%" onchange="matchValues('rs1','rt1')" />
+									</div>
+									<div class="formContainer">
+
+										<label for="rs2">R<sub>2</sub> (in Ω) </label>
+										<input type="range" id="rs2" max="1000" min="0" step="1" value="0"
+										style="display: block; width: 100%" onchange="matchValues('rs2','rt2')" />
+									</div>
+
+									<div class="formContainer">
+
+										<label for="rs3">R<sub>3</sub> (in Ω) </label>
+										<input type="range" id="rs3" max="1000" min="0" step="1" value="0"
+										style="display: block; width: 100%" onchange="matchValues('rs3','rt3')" />
+									</div>
+
+									</div>
+							</div>
                         </div>
 
                     </div>

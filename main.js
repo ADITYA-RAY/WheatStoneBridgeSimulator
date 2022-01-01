@@ -83,3 +83,40 @@ function simulate() {
   }
 }
 //aditya ray----------
+
+
+var f1 = document.getElementById("AlimCard1");
+var f2 = document.getElementById("AlimCard2");
+
+
+
+function fun1(){
+    
+    document.getElementById("AlimCard1").style.display = "block"
+    document.getElementById("AlimCard2").style.display = 'none';
+
+    document.getElementById("f1").style.boxShadow = 'inset 0.15em 0.15em 0.15em var(--shadow-white), inset -0.15em -0.15em 0.15em var(--shadow-gray), 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.3rem 0rem 0.6rem var(--shadow-white)'
+    document.getElementById("f1").style.color = '#6d5dfc'
+
+    document.getElementById("f2").style.boxShadow = 'none';
+    document.getElementById("f2").style.color = 'black';
+
+
+    
+}
+function fun2(){
+
+  onmouseover="bigImg(this)"
+
+
+
+  document.getElementById("AlimCard1").style.display = 'none';
+    document.getElementById("AlimCard2").style.display = 'block';
+    document.getElementById("f2").style.boxShadow = 'inset 0.15em 0.15em 0.15em var(--shadow-white), inset -0.15em -0.15em 0.15em var(--shadow-gray), 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.3rem 0rem 0.6rem var(--shadow-white)'
+    document.getElementById("f2").style.color = '#6d5dfc'
+
+    document.getElementById("f1").style.boxShadow = 'none';
+    document.getElementById("f1").style.color = 'black';
+}
+
+// alim
