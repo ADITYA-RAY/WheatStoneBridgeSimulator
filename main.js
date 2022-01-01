@@ -47,7 +47,7 @@ function matchValues(a, b) {
     var vg = galvanometer(rs1, rs2, rs3, unknown, supply);
     document.getElementById("vg").value = vg.toPrecision(8);
     final = unkownResistance(rs1, rs2, rs3, vg, supply);
-    glow(); //lakshman
+    glow(a,b); //lakshman
   }
 }
 function swap(a, b) {
