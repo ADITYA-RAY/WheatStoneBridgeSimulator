@@ -36,6 +36,12 @@ body {
   width: 100%;
 }
 
+.tabs--nav 
+{
+	position:absolute;
+	z-index=2;
+}
+
 .tabs .tabs--nav span {
   padding: 15px;
   display: block;
