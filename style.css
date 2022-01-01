@@ -296,3 +296,11 @@ h2{
 td{
   padding: 3px;
 }
+
+
+/*  Lakshman */
+
+.tabs--nav{
+  position: absolute;
+  z-index: 2;
+}
