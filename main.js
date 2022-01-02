@@ -17,11 +17,14 @@ function galvanometer(r1, r2, r3, r4, vs) {
 }
 
 function unkownResistance(r1, r2, r3, vg, vs) {
+  // console.log(r1,r2,r3,vg,vs);
   // Takes the first 3 resistances, galvanometer voltage and supply voltage
   // outputs the unknown resistance
-  let numerator = r2 * vs - (r1 + r2) * vg;
-  let denominator = r1 * vs + (r1 + r2) * vg;
-  let rx = (numerator * r3) / denominator;
+  // let numerator = r2 * vs - (r1 + r2) * vg;
+  // let denominator = r1 * vs + (r1 + r2) * vg;
+  // let numerator = r2;
+  // let denominator = r1;
+  let rx = (r2 * r3) / r1;
   return rx;
 }
 
@@ -40,10 +43,11 @@ function glow(a, b) {
 //aditya ray----------------
 function matchValues(a, b) {
   if (set && running) {
+    document.getElementById(b).value = document.getElementById(a).value;
     var rs1 = document.getElementById("rs1").value;
     var rs2 = document.getElementById("rs2").value;
     var rs3 = document.getElementById("rs3").value;
-    document.getElementById(b).value = document.getElementById(a).value;
+    // console.log(rs1,rs2,rs3);
     var vg = galvanometer(rs1, rs2, rs3, unknown, supply);
     document.getElementById("vg").value = vg.toPrecision(8);
     final = unkownResistance(rs1, rs2, rs3, vg, supply);
@@ -51,6 +55,7 @@ function matchValues(a, b) {
   }
 }
 function swap(a, b) {
+
   document.getElementById(b).value = document.getElementById(a).value;
 }
 function setResistance() {

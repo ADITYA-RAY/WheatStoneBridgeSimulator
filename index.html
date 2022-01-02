@@ -229,9 +229,9 @@
 										<form name="myForm">
 											<label for="rsx">R<sub>x</sub> (in Ω) </label> 
 											<input type="range" id="rsx" max="1000" min="0" step="1" value="20"
-											style="display: block; width: 100%" onchange="swap('rsx','rsxt')" />
+											style="display: block; width: 100%" oninput="swap('rsx','rsxt')" />
 											<input type="number" id="rsxt" max="1000" min="0" step="1" value="20"
-											onchange="swap('rsxt','rsx')" style="height: 30px; margin: 10px 10px;" />
+											oninput="swap('rsxt','rsx')" style="height: 30px; margin: 10px 10px;" />
 										</form>
 										
 									
@@ -277,22 +277,22 @@
                                 <form name="myForm">
                                     <label for="rsx">R<sub>x</sub></label>
                                     <input type="range" id="rsx" max="1000" min="0" step="1" value="20"
-                                        style="display: block;width: 100%;" onchange="swap('rsx','rsxt')">
+                                        style="display: block;width: 100%;" oninput="swap('rsx','rsxt')">
                                     <input type="number" id='rsxt' max="1000" min="0" step="1" value="20"
-                                        onchange="swap('rsxt','rsx')">
+                                        oninput="swap('rsxt','rsx')">
                                 </form>
 
                                 <button type="button" class="btn btn-primary" onclick="setResistance()">Set</button>
                                 <br>
                                 <label for="rs1">R<sub>1</sub></label>
                                 <input type="range" id="rs1" max="1000" min="0" step="1" value="0"
-                                    style="display: block;width: 100%;" onchange="matchValues('rs1','rt1')">
+                                    style="display: block;width: 100%;" oninput="matchValues('rs1','rt1')">
                                 <label for="rs2">R<sub>2</sub></label>
                                 <input type="range" id="rs2" max="1000" min="0" step="1" value="0"
-                                    style="display: block;width: 100%;" onchange="matchValues('rs2','rt2')">
+                                    style="display: block;width: 100%;" oninput="matchValues('rs2','rt2')">
                                 <label for="rs3">R<sub>3</sub></label>
                                 <input type="range" id="rs3" max="1000" min="0" step="1" value="0"
-                                    style="display: block;width: 100%;" onchange="matchValues('rs3','rt3')">
+                                    style="display: block;width: 100%;" oninput="matchValues('rs3','rt3')">
                                 <button type="button" class="btn btn-primary" onclick="simulate()">Simulate</button>
 
                                 <label for="rs3">R<sub>x</sub></label>
@@ -309,11 +309,11 @@
                                             style="position: absolute; left: 10px; top: 10px;"></canvas>
 
                                         <input type="number" class="vin r1" id="rt1" value="0"
-                                            onchange="matchValues('rt1','rs1')">
+                                            oninput="matchValues('rt1','rs1')">
                                         <input type="number" class="vin r2" id="rt2" value="0"
-                                            onchange="matchValues('rt2','rs2')">
+                                            oninput="matchValues('rt2','rs2')">
                                         <input type="number" class="vin r3" id="rt3" value="0"
-                                            onchange="matchValues('rt3','rs3')">
+                                            oninput="matchValues('rt3','rs3')">
                                         <input type="number" class="vg" id="vg" value="0" disabled>
                                         <input type="number" class="vin vs" id="vs" value="20">
                                         <div class="switch">
@@ -335,20 +335,20 @@
 									<div class="formContainer">
 												<label for="rs1">R<sub>1</sub> (in Ω)  </label>
 												<input type="range" id="rs1" max="1000" min="0" step="1" value="0"
-												style="display: block; width: 100%" onchange="matchValues('rs1','rt1')" />
+												style="display: block; width: 100%" oninput="matchValues('rs1','rt1')" />
 									</div>
 									<div class="formContainer">
 
 										<label for="rs2">R<sub>2</sub> (in Ω) </label>
 										<input type="range" id="rs2" max="1000" min="0" step="1" value="0"
-										style="display: block; width: 100%" onchange="matchValues('rs2','rt2')" />
+										style="display: block; width: 100%" oninput="matchValues('rs2','rt2')" />
 									</div>
 
 									<div class="formContainer">
 
 										<label for="rs3">R<sub>3</sub> (in Ω) </label>
 										<input type="range" id="rs3" max="1000" min="0" step="1" value="0"
-										style="display: block; width: 100%" onchange="matchValues('rs3','rt3')" />
+										style="display: block; width: 100%" oninput="matchValues('rs3','rt3')" />
 									</div>
 
 									</div>
