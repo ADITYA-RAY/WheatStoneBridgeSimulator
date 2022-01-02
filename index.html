@@ -31,17 +31,22 @@
                 <div class="container">
                     <h2>Theory</h2>
                     <br>
-                    
+
                     <p>The Wheatstone Bridge is an instrument designed for measuring an unknown resistance by
                         comparing
                         it with a known, or standard resistor.</p>
                     <p>
-                        R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are resistors of known resistance and the resistance of R<sub>2</sub> is adjustable. The
-                        resistance R<sub>2</sub> is adjusted until the bridge is "balanced" and no current flows through the
-                        galvanometer V<sub>G</sub>. At this point, the potential difference between the two midpoints (B and D)
-                        will be zero. Therefore the ratio of the two resistances in the known leg (R<sub>2</sub>/R<sub>1</sub>) is equal
+                        R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are resistors of known resistance and the
+                        resistance of R<sub>2</sub> is adjustable. The
+                        resistance R<sub>2</sub> is adjusted until the bridge is "balanced" and no current flows through
+                        the
+                        galvanometer V<sub>G</sub>. At this point, the potential difference between the two midpoints (B
+                        and D)
+                        will be zero. Therefore the ratio of the two resistances in the known leg
+                        (R<sub>2</sub>/R<sub>1</sub>) is equal
                         to
-                        the ratio of the two resistances in the unknown leg (R<sub>x</sub>/R<sub>3</sub>). If the bridge is unbalanced,
+                        the ratio of the two resistances in the unknown leg (R<sub>x</sub>/R<sub>3</sub>). If the bridge
+                        is unbalanced,
                         the
                         direction of the current indicates whether R<sub>2</sub> is too high or too low.
                     </p>
@@ -53,11 +58,14 @@
                     </p>
                     <p>Detecting zero current with a galvanometer can be done to extremely high precision.
                         Therefore, if
-                        R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are known to high precision, then R<sub>x</sub> can be measured to high precision. Very
+                        R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are known to high precision, then R<sub>x</sub>
+                        can be measured to high precision. Very
                         small changes in R<sub>x</sub> disrupt the balance and are readily detected.</p>
                     <p>
-                        Alternatively, if R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are known, but R<sub>2</sub> is not adjustable, the voltage difference
-                        across or current flow through the meter can be used to calculate the value of R<sub>x</sub>, using
+                        Alternatively, if R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> are known, but R<sub>2</sub>
+                        is not adjustable, the voltage difference
+                        across or current flow through the meter can be used to calculate the value of R<sub>x</sub>,
+                        using
                         Kirchhoff's circuit laws. This setup is frequently used in strain gauge and resistance
                         thermometer measurements, as it is usually faster to read a voltage level off a meter than
                         to
@@ -144,7 +152,8 @@
                             not move the slider while holding it down, as that would scrape bits of metal off of the
                             wire
                             and
-                            result in a non-uniform cross-section. This will lead to the failure of the ratio of R<sub>3</sub>
+                            result in a non-uniform cross-section. This will lead to the failure of the ratio of
+                            R<sub>3</sub>
                             to
                             R<sub>4</sub> to
                             equal the ratio of L3 to L4.) When the galvanometer deflection has been reduced to zero
@@ -176,7 +185,8 @@
                                 <br>
                                 <ol style="font-size:11px">
                                     <li>
-                                        Set the value of unknown resistor (default will be set as 20 ohm) and click set button.
+                                        Set the value of unknown resistor (default will be set as 20 ohm) and click set
+                                        button.
                                     </li>
                                     <br>
 
@@ -188,117 +198,76 @@
                                         Now set the values of R<sub>1</sub> and R<sub>2</sub> using slider.
 
                                     </li><br>
-                                    
+
                                     <li>
-                                        Now change the value of R<sub>3</sub> until the galvanometer deflection tends to zero (at least 3 zeros after decimal).
+                                        Now change the value of R<sub>3</sub> until the galvanometer deflection tends to
+                                        zero (at least 3 zeros after decimal).
                                     </li><br>
                                     <li>
-                                        Click the simulate button. 
+                                        Click the simulate button.
                                     </li><br>
 
 
                                 </ol>
                             </div>
                             <br>
-                            <div class="AlimContainer" >
-								<div class="our_card">
-									<div class="box">
-	
-										<div id="f1" onclick="fun1()">Set Unknown Resistance</div>
-										<div id="f2" onclick="fun2()">Simulate</div>
-	
-									</div>
-									<!-- <div class="control_tabs--nav">
-										<span> Set Resistance Value </span>
-										<span> Measure Resistance Value </span>
-									</div>
-									<div class="control_tabs--content">
-										<div>
-											hllo
-										</div>
-										<div>
-											hi
-										</div>
-									</div> -->
-									
-									<div id="AlimCard1">
+                            <div class="AlimContainer">
+                                <div class="our_card">
+                                    <div class="box">
 
-									<div class="purple"> <h6>Set Unknown Resistance </h6></div>
-									
+                                        <div id="f1" onclick="fun1()">Set Unknown Resistance</div>
+                                        <div id="f2" onclick="fun2()">Simulate</div>
 
-										<form name="myForm">
-											<label for="rsx">R<sub>x</sub> (in Ω) </label> 
-											<input type="range" id="rsx" max="1000" min="0" step="1" value="20"
-											style="display: block; width: 100%" oninput="swap('rsx','rsxt')" />
-											<input type="number" id="rsxt" max="1000" min="0" step="1" value="20"
-											oninput="swap('rsxt','rsx')" style="height: 30px; margin: 10px 10px;" />
-										</form>
-										
-									
-									<button type="button" class="set" onclick="setResistance()" style="margin: 3px 10px;">
-										Set
-									</button>
-									<br />
-									<br>
-									
-									
-								    </div>
-									<div id="AlimCard2">
-										<div class="sContainer">
-											<div class="one">
-												<label for="rs3" style="width: fit-content; margin-right: 20px;">R<sub>x</sub> (in Ω) </label>
-												<input type="number" id="sim" max="1000" min="0" step="1" value="0" disabled />
-												
-											</div>
-											
-											<button type="button" class="set" id="simButton" style="width: fit-content; margin-left: 20px;height: 52px;margin-top: 20px; " onclick="simulate()">
-												Simulate
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-                            <!-- <div class="our_card blink"> -->
-                                <!-- <div class="control_tabs--nav">
-                                    <span> Set Resistance Value </span>
-                                    <span> Measure Resistance Value </span>
+                                    </div>
 
 
+                                    <div id="AlimCard1">
+
+                                        <div class="purple">
+                                            <h6>Set Unknown Resistance </h6>
+                                        </div>
+
+
+                                        <form name="myForm">
+                                            <label for="rsx">R<sub>x</sub> (in Ω) </label>
+                                            <input type="range" id="rsx" max="1000" min="0" step="1" value="20"
+                                                style="display: block; width: 100%" oninput="swap('rsx','rsxt')" />
+                                            <input type="number" id="rsxt" max="1000" min="0" step="1" value="20"
+                                                oninput="swap('rsxt','rsx')" style="height: 30px; margin: 10px 10px;" />
+                                        </form>
+
+
+                                        <button type="button" class="set" onclick="setResistance()"
+                                            style="margin: 3px 10px;">
+                                            Set
+                                        </button>
+                                        <br />
+                                        <br>
+
+
+                                    </div>
+                                    <div id="AlimCard2">
+                                        <div class="sContainer">
+                                            <div class="one">
+                                                <label for="rs3"
+                                                    style="width: fit-content; margin-right: 20px;">R<sub>x</sub> (in Ω)
+                                                </label>
+                                                <input type="number" id="sim" max="1000" min="0" step="1" value="0"
+                                                    disabled />
+
+                                            </div>
+
+                                            <button type="button" class="set" id="simButton"
+                                                style="width: fit-content; margin-left: 20px;height: 52px;margin-top: 20px; "
+                                                onclick="simulate()">
+                                                Simulate
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="control_tabs--content">
-                                    <div>
-                                        hllo
-                                    </div>
-                                    <div>
-                                        hi
-                                    </div>
-                                </div> -->
-                                <!-- <div class="purple">Set Unknown Resistance</div>
-                                <form name="myForm">
-                                    <label for="rsx">R<sub>x</sub></label>
-                                    <input type="range" id="rsx" max="1000" min="0" step="1" value="20"
-                                        style="display: block;width: 100%;" oninput="swap('rsx','rsxt')">
-                                    <input type="number" id='rsxt' max="1000" min="0" step="1" value="20"
-                                        oninput="swap('rsxt','rsx')">
-                                </form>
+                            </div>
 
-                                <button type="button" class="btn btn-primary" onclick="setResistance()">Set</button>
-                                <br>
-                                <label for="rs1">R<sub>1</sub></label>
-                                <input type="range" id="rs1" max="1000" min="0" step="1" value="0"
-                                    style="display: block;width: 100%;" oninput="matchValues('rs1','rt1')">
-                                <label for="rs2">R<sub>2</sub></label>
-                                <input type="range" id="rs2" max="1000" min="0" step="1" value="0"
-                                    style="display: block;width: 100%;" oninput="matchValues('rs2','rt2')">
-                                <label for="rs3">R<sub>3</sub></label>
-                                <input type="range" id="rs3" max="1000" min="0" step="1" value="0"
-                                    style="display: block;width: 100%;" oninput="matchValues('rs3','rt3')">
-                                <button type="button" class="btn btn-primary" onclick="simulate()">Simulate</button>
 
-                                <label for="rs3">R<sub>x</sub></label>
-                                <input type="number" id="sim" max="1000" min="0" step="1" value="0" disabled> -->
-
-                            <!-- </div>   -->
                         </div>
                         <div class="col-12 col-md-8">
                             <div class="our_card blink">
@@ -328,31 +297,33 @@
                             </div>
                             <br>
                             <div class="our_card">
-								<div class="purple"> <h3>Controls</h3></div>
-								<div >
+                                <div class="purple">
+                                    <h3>Controls</h3>
+                                </div>
+                                <div>
 
-									
-									<div class="formContainer">
-												<label for="rs1">R<sub>1</sub> (in Ω)  </label>
-												<input type="range" id="rs1" max="1000" min="0" step="1" value="0"
-												style="display: block; width: 100%" oninput="matchValues('rs1','rt1')" />
-									</div>
-									<div class="formContainer">
 
-										<label for="rs2">R<sub>2</sub> (in Ω) </label>
-										<input type="range" id="rs2" max="1000" min="0" step="1" value="0"
-										style="display: block; width: 100%" oninput="matchValues('rs2','rt2')" />
-									</div>
+                                    <div class="formContainer">
+                                        <label for="rs1">R<sub>1</sub> (in Ω) </label>
+                                        <input type="range" id="rs1" max="1000" min="0" step="1" value="0"
+                                            style="display: block; width: 100%" oninput="matchValues('rs1','rt1')" />
+                                    </div>
+                                    <div class="formContainer">
 
-									<div class="formContainer">
+                                        <label for="rs2">R<sub>2</sub> (in Ω) </label>
+                                        <input type="range" id="rs2" max="1000" min="0" step="1" value="0"
+                                            style="display: block; width: 100%" oninput="matchValues('rs2','rt2')" />
+                                    </div>
 
-										<label for="rs3">R<sub>3</sub> (in Ω) </label>
-										<input type="range" id="rs3" max="1000" min="0" step="1" value="0"
-										style="display: block; width: 100%" oninput="matchValues('rs3','rt3')" />
-									</div>
+                                    <div class="formContainer">
 
-									</div>
-							</div>
+                                        <label for="rs3">R<sub>3</sub> (in Ω) </label>
+                                        <input type="range" id="rs3" max="1000" min="0" step="1" value="0"
+                                            style="display: block; width: 100%" oninput="matchValues('rs3','rt3')" />
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -360,72 +331,72 @@
 
             </div>
             <div>
-                <h2 >About Us</h2>
+                <h2>About Us</h2>
                 <div class="box">
-                    
-                    <div class="contain blink" >
-                    <h5>Created by:</h5>
-                    <table>
-                        <tr>
-                            <td>
-                               Aditya Ray
-                            </td>
-                            <td>
-                                20117006
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Lakshman Mulchandani
-                            </td>
-                            <td>
-                                20117048
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Piyush Thakare
-                            </td>
-                            <td>
-                                20117104
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Alim Khan
-                            </td>
-                            <td>
-                                20117013
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Aditya Ghidora
-                            </td>
-                            <td>
-                                20117005
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Premchand Maddikuntla 
-                            </td>
-                            <td>
-                                20117051
-                            </td>
-                        </tr>
-                        
-                    </table>
+
+                    <div class="contain blink">
+                        <h5>Created by:</h5>
+                        <table>
+                            <tr>
+                                <td>
+                                    Aditya Ray
+                                </td>
+                                <td>
+                                    20117006
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lakshman Mulchandani
+                                </td>
+                                <td>
+                                    20117048
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Piyush Thakare
+                                </td>
+                                <td>
+                                    20117104
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Alim Khan
+                                </td>
+                                <td>
+                                    20117013
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Aditya Ghidora
+                                </td>
+                                <td>
+                                    20117005
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Premchand Maddikuntla
+                                </td>
+                                <td>
+                                    20117051
+                                </td>
+                            </tr>
+
+                        </table>
                     </div>
-                    <div class="contain blink" >
+                    <div class="contain blink">
                         <h5>Under supervision of:</h5>
                         <p>
-                            Dr. Dhanavath Suresh sir  <br>
+                            Dr. Dhanavath Suresh sir <br>
                             Department of Electrical Engineering <br>
                             National Institute of Technology, Raipur
                         </p>
-                        </div>
-                </div> 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
