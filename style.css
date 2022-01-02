@@ -39,7 +39,7 @@ body {
 .tabs--nav 
 {
 	position:absolute;
-	z-index=2;
+	z-index : 2;
 }
 
 .tabs .tabs--nav span {
