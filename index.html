@@ -177,13 +177,12 @@
             <div>
 
                 <div class="container">
-
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <div class="our_card blink">
                                 <div class="purple">Procedure</div>
                                 <br>
-                                <ol style="font-size:11px">
+                                <ol style="font-size:13px">
                                     <li>
                                         Set the value of unknown resistor (default will be set as 20 ohm) and click set
                                         button.
@@ -225,6 +224,7 @@
 
                                         <div class="purple">
                                             <h6>Set Unknown Resistance </h6>
+                                            (0 to 1000 Ω)
                                         </div>
 
 
@@ -266,7 +266,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <br>
 
                         </div>
                         <div class="col-12 col-md-8">
@@ -299,6 +299,7 @@
                             <div class="our_card">
                                 <div class="purple">
                                     <h3>Controls</h3>
+                                    (0 to 1000 Ω)
                                 </div>
                                 <div>
 
@@ -321,10 +322,36 @@
                                         <input type="range" id="rs3" max="1000" min="0" step="1" value="0"
                                             style="display: block; width: 100%" oninput="matchValues('rs3','rt3')" />
                                     </div>
-
+                                    <div class="addcontainer">
+                                        <button type="button" class="Add" onclick="addObs()" style="margin: 3px 10px;">
+                                            Add Observation
+                                        </button>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="our_card">
+                                <table id="observation">
+                                    <tr class="round">
+                                        <th>Sr No.</th>
+                                        <th>V (in volts)</th>
+                                        <th>R<sub>1</sub> (in Ω)</th>
+                                        <th>R<sub>2</sub> (in Ω)</th>
+                                        <th>R<sub>3</sub> (in Ω)</th>
+                                        <th>R<sub>x</sub> (in Ω)</th>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+
 
                     </div>
                 </div>

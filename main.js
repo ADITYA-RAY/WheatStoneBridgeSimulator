@@ -7,16 +7,21 @@ var unknown = 20,
   set = false,
   running = false,
   final;
-function galvanometer(r1, r2, r3, r4, vs) {
+
+let r1 = 20,
+  r2 = 20,
+  r3 = 20,
+  vs = 20;
+function galvanometer() {
   // Takes the 4 resistances and a supply voltage
   // outputs the galvanometer voltage
-  let first = r2 / (r1 + r2),
-    second = r4 / (r3 + r4);
+  let first = r2 / (r1 + r2);
+  let second = unknown / (r3 + unknown);
   let vg = (first - second) * vs;
   return vg;
 }
 
-function unkownResistance(r1, r2, r3, vg, vs) {
+function unkownResistance() {
   // console.log(r1,r2,r3,vg,vs);
   // Takes the first 3 resistances, galvanometer voltage and supply voltage
   // outputs the unknown resistance
@@ -44,25 +49,26 @@ function glow(a, b) {
 function matchValues(a, b) {
   if (set && running) {
     document.getElementById(b).value = document.getElementById(a).value;
-    var rs1 = document.getElementById("rs1").value;
-    var rs2 = document.getElementById("rs2").value;
-    var rs3 = document.getElementById("rs3").value;
+    r1 = parseFloat(document.getElementById("rs1").value);
+    r2 = parseFloat(document.getElementById("rs2").value);
+    r3 = parseFloat(document.getElementById("rs3").value);
     // console.log(rs1,rs2,rs3);
-    var vg = galvanometer(rs1, rs2, rs3, unknown, supply);
-    document.getElementById("vg").value = vg.toPrecision(8);
-    final = unkownResistance(rs1, rs2, rs3, vg, supply);
-    glow(a,b); //lakshman
+    var vg = galvanometer();
+    console.log(vg);
+    document.getElementById("vg").value = vg;
+    console.log(document.getElementById("vg").value);
+    final = unkownResistance();
+    glow(a, b); //lakshman
   }
 }
 function swap(a, b) {
-
   document.getElementById(b).value = document.getElementById(a).value;
 }
 function setResistance() {
   if (!running) {
     set = true;
-    unknown = document.getElementById("rsx").value;
-    supply = document.getElementById("vs").value;
+    unknown = parseFloat(document.getElementById("rsx").value);
+    supply = parseFloat(document.getElementById("vs").value);
   } else {
     alert("Switch off the circuit first.");
   }
@@ -87,41 +93,55 @@ function simulate() {
     );
   }
 }
+var rowno = 0;
+function addObs() {
+  rowno++;
+  var table = document.getElementById("observation");
+  var rs1 = document.getElementById("rs1").value;
+  var rs2 = document.getElementById("rs2").value;
+  var rs3 = document.getElementById("rs3").value;
+  table.innerHTML +=
+    "<tr><td>" +
+    rowno +
+    "</td><td>" +
+    supply +
+    "</td><td>" +
+    rs1 +
+    "</td><td>" +
+    rs2 +
+    "</td><td>" +
+    rs3 +
+    "</td><td>" +
+    final +
+    "</td></tr>";
+}
 //aditya ray----------
-
 
 var f1 = document.getElementById("AlimCard1");
 var f2 = document.getElementById("AlimCard2");
 
+function fun1() {
+  document.getElementById("AlimCard1").style.display = "block";
+  document.getElementById("AlimCard2").style.display = "none";
 
+  document.getElementById("f1").style.boxShadow =
+    "inset 0.15em 0.15em 0.15em var(--shadow-white), inset -0.15em -0.15em 0.15em var(--shadow-gray), 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.3rem 0rem 0.6rem var(--shadow-white)";
+  document.getElementById("f1").style.color = "#6d5dfc";
 
-function fun1(){
-    
-    document.getElementById("AlimCard1").style.display = "block"
-    document.getElementById("AlimCard2").style.display = 'none';
-
-    document.getElementById("f1").style.boxShadow = 'inset 0.15em 0.15em 0.15em var(--shadow-white), inset -0.15em -0.15em 0.15em var(--shadow-gray), 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.3rem 0rem 0.6rem var(--shadow-white)'
-    document.getElementById("f1").style.color = '#6d5dfc'
-
-    document.getElementById("f2").style.boxShadow = 'none';
-    document.getElementById("f2").style.color = 'black';
-
-
-    
+  document.getElementById("f2").style.boxShadow = "none";
+  document.getElementById("f2").style.color = "black";
 }
-function fun2(){
+function fun2() {
+  onmouseover = "bigImg(this)";
 
-  onmouseover="bigImg(this)"
+  document.getElementById("AlimCard1").style.display = "none";
+  document.getElementById("AlimCard2").style.display = "block";
+  document.getElementById("f2").style.boxShadow =
+    "inset 0.15em 0.15em 0.15em var(--shadow-white), inset -0.15em -0.15em 0.15em var(--shadow-gray), 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.3rem 0rem 0.6rem var(--shadow-white)";
+  document.getElementById("f2").style.color = "#6d5dfc";
 
-
-
-  document.getElementById("AlimCard1").style.display = 'none';
-    document.getElementById("AlimCard2").style.display = 'block';
-    document.getElementById("f2").style.boxShadow = 'inset 0.15em 0.15em 0.15em var(--shadow-white), inset -0.15em -0.15em 0.15em var(--shadow-gray), 0.3rem 0.3rem 0.6rem var(--shadow-gray), -0.3rem 0rem 0.6rem var(--shadow-white)'
-    document.getElementById("f2").style.color = '#6d5dfc'
-
-    document.getElementById("f1").style.boxShadow = 'none';
-    document.getElementById("f1").style.color = 'black';
+  document.getElementById("f1").style.boxShadow = "none";
+  document.getElementById("f1").style.color = "black";
 }
 
 // alim
