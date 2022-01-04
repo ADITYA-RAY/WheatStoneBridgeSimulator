@@ -468,8 +468,23 @@ label {
 .res{
   /* align-items: center; */
   display: block;
-  padding: 13px;
+  padding: 10px;
   text-align: center;
   border-radius: 6px;
+  margin: 12px;
 }
 
+.qbox p{
+  display: block;
+  padding: 12px;
+  margin: 0px;
+  border-radius: 5px;
+  
+}
+.qbox p label{
+  display: inline;
+  
+  padding: 12px;
+  margin: 0px;
+  
+}
