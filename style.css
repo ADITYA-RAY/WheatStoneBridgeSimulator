@@ -441,3 +441,35 @@ label {
   border: none;
   transition: background, color 0.5s ease;
 }
+
+
+/* quiz */
+/* piyush thakare */
+
+.qbox{
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--shadow-gray),
+    -0.2rem -0.2rem 0.5rem var(--shadow-white);
+  background-color: var(--bg-gray);
+  border-radius: 12px;
+  padding: 60px;
+  margin: 20px;
+  
+
+}
+.quizcontain{
+  display: flex;
+  flex-wrap: wrap; 
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: 34px;
+}
+
+.res{
+  /* align-items: center; */
+  display: block;
+  padding: 13px;
+  text-align: center;
+  border-radius: 6px;
+}
+

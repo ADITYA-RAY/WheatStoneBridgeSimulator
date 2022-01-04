@@ -28,6 +28,7 @@
         <span> <i class="bi bi-book"></i> Theory </span>
         <span> <i class="bi bi-gear"></i> Procedure </span>
         <span> <i class="bi bi-eye"></i> Simulator</span>
+        <span><i class="bi bi-check2-square"></i> Quiz</span>
         <span><i class="bi bi-person"></i> About</span>
       </div>
       <div class="tabs--content">
@@ -425,6 +426,67 @@
               </div>
             </div>
           </div>
+        </div>
+        <div>
+            <h2>Take a small quiz</h2>
+            <form action="" name="quiz" id="quiz">
+          <div class="quizcontain">
+                <div class="qbox">
+                    <p>1. Wheatstone bridge is a __________</p>
+                    <p><input type="radio" name="question1" value="AC bridge" id="11">AC bridge</p>
+                    <p><input type="radio" name="question1" value="DC bridge" id="12">DC bridge</p>
+                    <p><input type="radio" name="question1" value="high voltage bridge" id="13">high voltage bridge</p>
+                    <p><input type="radio" name="question1" value=" power dissipation bridge" id="14"> power dissipation bridge</p>                      
+                    <span id="msg1" class="res"></span>
+                    <p><input type="button" name="" value="check answer" onclick="check('12','msg1')" class="Add blink"></p>
+                </div>
+                
+                
+                <div class="qbox">
+                    <p>2. How many resistors are used in wheatstone bridge?</p>
+                    <p><input type="radio" name="question3" value="1" id="21">1</p>
+                    <p><input type="radio" name="question3" value="2" id="22">2</p>
+                    <p><input type="radio" name="question3" value="3" id="23">3</p>
+                    <p><input type="radio" name="question3" value="4" id="24">4</p>                      
+                    <span id="msg2" class="res"></span>
+                    <p><input type="button" name="" value="check answer" onclick="check('24','msg2')" class="Add blink"></p>
+                </div>
+                
+                
+            
+                <div class="qbox">
+                    <p>3. Telephone companies make use of the Wheatstone bridge for _________</p>
+                    <p><input type="radio" name="question3" value="measuring the telephone resistance" id="31">measuring the telephone resistance</p>
+                    <p><input type="radio" name="question3" value="computing the line strength" id="32">computing the line strength</p>
+                    <p><input type="radio" name="question3" value="maintaining dialtone" id="33">maintaining dialtone</p>
+                    <p><input type="radio" name="question3" value="locating the cable faults" id="34">locating the cable faults</p>                      
+                    <span id="msg3" class="res"></span>
+                    <p><input type="button" name="" value="check answer" onclick="check('34','msg3')" class="Add blink"></p>
+                </div>
+                
+               
+                <div class="qbox">
+                    <p>4. How can a Wheatstone bridge be used for the measurement of physical parameters?</p>
+                    <p><input type="radio" name="question3" value="in conjunction with a rectifier" id="41">in conjunction with a rectifier</p>
+                    <p><input type="radio" name="question3" value="along with an op amp" id="42">along with an op amp</p>
+                    <p><input type="radio" name="question3" value=" by connecting it to a thermistor" id="43"> by connecting it to a thermistor</p>
+                    <p><input type="radio" name="question3" value="by making use of a transducer" id="44">by making use of a transducer</p>                      
+                    <span id="msg4" class="res"></span>
+                    <p><input type="button" name="" value="check answer" onclick="check('42','msg4')" class="Add blink"></p>
+                </div>
+                
+                <div class="qbox">
+                    <p>5. By using the variations on a Wheatstone bridge we can _________</p>
+                    <p><input type="radio" name="question3" value="measure quantities such as voltage, current and power" id="51">measure quantities such as voltage, current and power</p>
+                    <p><input type="radio" name="question3" value="measure high resistance values" id="52">measure high resistance values</p>
+                    <p><input type="radio" name="question3" value="measure quantities such as complex power" id="53">measure quantities such as complex power</p>
+                    <p><input type="radio" name="question3" value="measure quantities such as capacitance, inductance and impedance" id="54">measure quantities such as capacitance, inductance and impedance</p>                      
+                    <span id="msg5" class="res"></span>
+                    <p><input type="button" name="" value="check answer" onclick="check('54','msg5')" class="Add blink"></p>
+                </div>
+            </div>
+            </form>
+          
         </div>
         <div>
           <h2>About Us</h2>

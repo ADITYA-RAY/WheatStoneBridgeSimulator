@@ -145,3 +145,20 @@ function fun2() {
 }
 
 // alim
+
+
+
+//quiz
+//piyush thakare
+function check(correct,msg){
+  if(document.getElementById(correct).checked){
+    document.getElementById(msg).innerHTML='correct!'
+    document.getElementById(msg).style.backgroundColor='rgb(93 225 79 / 62%)';
+  }
+  else{
+    document.getElementById(msg).innerHTML='Incorrect!'
+    document.getElementById(msg).style.backgroundColor='rgb(255 0 0 / 58%)';
+
+  }
+  
+}
